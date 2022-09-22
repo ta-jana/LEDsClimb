@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bluetooth
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      
+<ion-title size="large">Page</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <div id="cntBluetooth">
+    <ion-card>
+    <ion-button (click)="activeBluetooth()">Search</ion-button>
+    <div *ngFor="let data of Devices">
+      <p>{{data.name}}</p>
+      <p>{{data.address}}</p>
+
+      <ion-button (click)="Connect(data.address)">Connect {{data.name}}</ion-button>
+     </div>
+    
+    </ion-card>
+  </div>
+  </div>
+</ion-content>
+

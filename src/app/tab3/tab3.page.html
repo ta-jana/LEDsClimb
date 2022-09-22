@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Choose your own path
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="input">
+
+  </div>
+ 
+  <ion-item>Go through diodes:</ion-item>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="goUp()" >
+          <ion-icon name="chevron-up-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="goLeft()" >
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="goDown()" >
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="goRight()" >
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    
+
+    <ion-row class="ion-align-items-center ion-padding">
+      <ion-col size="12" class="ion-text-center ion-padding">
+        <ion-button (click)="addToPath()" >
+         Add diod to the path
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+ 
+      <div id="diods"></div>
+   
+
+   
+
+    <ion-row class="ion-align-items-center ion-padding">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="savePath()" >
+         Save path
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-items-center ion-padding">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="newPath()" >
+         New Path
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+</ion-content>
